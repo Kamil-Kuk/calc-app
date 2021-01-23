@@ -1,6 +1,6 @@
 # CalcApp
 
-This is a erpository for a simple app written for `Angular` course. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+This is a repository for a simple app written for `Angular` course. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
 ## Setup
 
