@@ -5,10 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  numA = 10;
-  numB = 3;
-  numC = 99.99;
-  numD = 10e4;
   title = 'calc-app';
+  firstNum: number;
+  secondNum: number;
+
+  formChanged(): void {
+    this.firstNum = Number(document.getElementsByName('firstNum')[0]);
+    this.secondNum = Number(document.getElementsByName('secondNum')[0]);
+  }
 }

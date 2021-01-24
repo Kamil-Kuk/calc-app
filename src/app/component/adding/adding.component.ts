@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ContentChild, OnInit, ViewChild} from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-adding',
   templateUrl: './adding.component.html',
   styleUrls: ['./adding.component.css']
 })
-// function add(x: number,y: number): number {
-//   return x + y;
-// }
 
 export class AddingComponent {
   numA = 10;
@@ -15,7 +13,7 @@ export class AddingComponent {
   numC = 99.99;
   numD = 10e4;
   add: (baseValue: number, increment: number) => number
-    = function(x,y){
+    = function(x, y){
     return x + y;
   };
 }

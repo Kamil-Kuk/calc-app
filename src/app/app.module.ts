@@ -21,4 +21,5 @@ import { DivisionComponent } from './component/division/division.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
