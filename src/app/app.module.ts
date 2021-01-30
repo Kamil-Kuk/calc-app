@@ -2,21 +2,30 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AddingComponent } from './component/adding/adding.component';
-import { SubtractionComponent } from './component/subtraction/subtraction.component';
-import { MultiplicationComponent } from './component/multiplication/multiplication.component';
-import { DivisionComponent } from './component/division/division.component';
+import { HomeComponent } from './component/home/home.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import {AppRoutingModule} from './app-routing.module';
+import { BasicComponent } from './component/basic/basic.component';
+import { AdvancedComponent } from './component/advanced/advanced.component';
+import { ConverterComponent } from './component/converter/converter.component';
+import { LogComponent } from './component/log/log.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddingComponent,
-    SubtractionComponent,
-    MultiplicationComponent,
-    DivisionComponent
+    HomeComponent,
+    PageNotFoundComponent,
+    BasicComponent,
+    AdvancedComponent,
+    ConverterComponent,
+    LogComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

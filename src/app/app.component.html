@@ -1,13 +1,60 @@
-<form action="/action_page.php" id="form1">
-  <label for="firstNum">First number:</label>
+<table class="table table-borderless">
+  <thead class="thead-padding-class">
+  <td>
+    <!--    NAVIGATION  -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/','basic']">Basic</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/','advanced']">Advanced</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/','converter']">Converter</a>
+      </li>
+    </ul>
+  </td>
+  <td class="td-class">
+    Log
+  </td>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <!--      INPUT FIELD  -->
+      <form>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="equation" placeholder="Enter your equation here"
+               aria-label="equatation" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" (click)="equalButtonClick()" type="submit" id="button-addon2">=
+          </button>
+        </div>
+      </div>
+      </form>
+    </td>
+    <!--    LOG FILED  -->
+    <td rowspan="2">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <p class="lead">
+            <app-log [equationInLog]="equation"></app-log>
+          </p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <router-outlet></router-outlet>
+    </td>
+  </tr>
+  </tbody>
+
+</table>
 
 
-  <input type="number" id="firstNum" name="firstNum"><br><br>
-  <label for="secondNum">Second number:</label>
-  <input type="number" id="secondNum" name="secondNum"><br><br>
-  <input type="submit" (click)="formChanged()" value="Submit">
-</form>
-<app-adding></app-adding>
-<app-subtraction></app-subtraction>
-<app-multiplication></app-multiplication>
-<app-division></app-division>
+
+
+
+
