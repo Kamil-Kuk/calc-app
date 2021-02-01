@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -7,13 +7,21 @@ import {FormControl, FormGroup} from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent{
-  public inputForm = new FormGroup({
-    input: new FormControl(''),
+  submitted = false;
+  public equationForm = new FormGroup({
+    equation: new FormControl('', [
+      Validators.required,
+      Validators.pattern('[-]?[0-9]+[,|.]?[0-9]*[+|-|\\/|*]?[-]?[0-9]*[,|.]?[0-9]*')
+    ]),
   });
   @Output() equationSubmittedEvent = new EventEmitter<string>();
 
+  get equation(): AbstractControl {
+    return this.equationForm.get('equation');;
+  }
   public onSubmit(): void {
-    this.equationSubmittedEvent.emit(this.inputForm.value.input);
-    this.inputForm.reset();
+    this.submitted = true;
+    this.equationSubmittedEvent.emit(this.equationForm.value.equation);
+    this.equationForm.reset();
   }
 }
