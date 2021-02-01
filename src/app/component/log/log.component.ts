@@ -6,9 +6,10 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./log.component.css']
 })
 export class LogComponent {
-
+  // public logs: string[] = [];
   @Input() equationInLog: string;
 
-  constructor() { }
-
+  // constructor() {
+  //   this.logs.push(this.equationInLog);
+  // }
 }

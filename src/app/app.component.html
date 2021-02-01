@@ -20,37 +20,24 @@
   </thead>
   <tbody>
   <tr>
+    <!--      INPUT FIELD  -->
     <td>
-      <!--      INPUT FIELD  -->
-      <form>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" [(ngModel)]="equation" placeholder="Enter your equation here"
-               aria-label="equatation" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" (click)="equalButtonClick()" type="submit" id="button-addon2">=
-          </button>
-        </div>
-      </div>
-      </form>
+      <app-input (equationSubmittedEvent)="addEquation($event)"></app-input>
     </td>
-    <!--    LOG FILED  -->
+
+      <!--    LOG FILED  -->
     <td rowspan="2">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <p class="lead">
-            <app-log [equationInLog]="equation"></app-log>
-          </p>
-        </div>
-      </div>
+      <app-log [equationInLog]="equation"></app-log>
     </td>
   </tr>
   <tr>
+
+    <!--  ROUTER    -->
     <td>
       <router-outlet></router-outlet>
     </td>
   </tr>
   </tbody>
-
 </table>
 
 

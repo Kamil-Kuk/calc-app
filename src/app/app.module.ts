@@ -10,6 +10,7 @@ import { AdvancedComponent } from './component/advanced/advanced.component';
 import { ConverterComponent } from './component/converter/converter.component';
 import { LogComponent } from './component/log/log.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { InputComponent } from './component/input/input.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BasicComponent,
     AdvancedComponent,
     ConverterComponent,
-    LogComponent
+    LogComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

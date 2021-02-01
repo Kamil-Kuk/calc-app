@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +9,10 @@ import {FormBuilder} from '@angular/forms';
 
 export class AppComponent {
   title = 'calc-app';
-  equation: string;
-  @Output() onClick = new EventEmitter();
 
+  public equation: string;
 
-  public equalButtonClick(): void {
-    this.onClick.emit();
-
+  addEquation(newInput: string): void {
+    this.equation = newInput;
   }
-
-
 }

@@ -1,0 +1,9 @@
+<form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-1">
+    <input type="text" formControlName="input" class="form-control" placeholder="Enter your equation here" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="submit">=</button>
+    </div>
+  </div>
+</form>
+
