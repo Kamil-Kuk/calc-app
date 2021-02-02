@@ -22,40 +22,17 @@
   <tr>
 
     <!--      INPUT FIELD  -->
-    <td>
-      <form [formGroup]="equationForm" (ngSubmit)="onSubmit()">
-        <div class="input-group mb-1">
-          <input type="text" formControlName="equation" class="form-control" placeholder="Enter your equation here" aria-describedby="button-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="submit" [disabled]="equation.invalid">=</button>
-          </div>
-        </div>
-        <div *ngIf="equation.invalid && (equation.dirty || equation.touched)" class="alert alert-danger">
-          <div *ngIf="equation.errors.pattern">
-            Invalid input
-          </div>
-          <div *ngIf="equation.errors.maxLength">
-            Input too long
-          </div>
-          <div *ngIf="equation.errors.required">
-            Input required
-          </div>
-        </div>
-      </form>
-    </td>
-
-      <!--    LOG FILED  -->
-    <td rowspan="2">
-      <app-log [equationInLog]="equationSubmitted"></app-log>
-    </td>
-  </tr>
-  <tr>
-
     <!--  ROUTER    -->
     <td>
       <router-outlet></router-outlet>
     </td>
+
+      <!--    LOG FILED  -->
+    <td>
+      <app-log [equationInLog]="equationSubmitted"></app-log>
+    </td>
   </tr>
+
   </tbody>
 </table>
 
