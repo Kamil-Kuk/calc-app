@@ -12,6 +12,9 @@
     <div *ngIf="equation.errors.pattern">
       Invalid input
     </div>
+    <div *ngIf="equation.errors.maxLength">
+      Input too long
+    </div>
     <div *ngIf="equation.errors.required">
       Input required
     </div>

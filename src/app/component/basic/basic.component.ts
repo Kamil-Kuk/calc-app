@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-basic',
@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic.component.css']
 })
 export class BasicComponent implements OnInit {
-
-  constructor() { }
+  @Input() equationInLog: string;
 
   ngOnInit(): void {
   }

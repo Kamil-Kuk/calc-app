@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,29 @@ import {Component} from '@angular/core';
 })
 
 
-export class AppComponent {
+export class AppComponent{
   title = 'calc-app';
+  private submitted = false;
+  private illegalRegex = '[^a-z]*';
+  public equationSubmitted = '';
+  public equationForm = new FormGroup({
+    equation: new FormControl('', [
+      Validators.required,
+      Validators.maxLength(45),
+      Validators.pattern(this.illegalRegex)
+    ]),
+  });
 
-  public equation: string;
+  get equation(): AbstractControl {
+    return this.equationForm.get('equation');
+  }
 
-  addEquation(newInput: string): void {
-    this.equation = newInput;
+  constructor() {
+  }
+
+  public onSubmit(): void {
+    this.submitted = true;
+    this.equationSubmitted = this.equationForm.value.equation;
+    this.equationForm.reset();
   }
 }

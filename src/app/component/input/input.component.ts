@@ -7,17 +7,20 @@ import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/form
   styleUrls: ['./input.component.css']
 })
 export class InputComponent{
-  submitted = false;
+  private submitted = false;
+  private illegalRegex = '[^a-Z]';
+  // illegalRegex2 = '[-]?[0-9]+[,|.]?[0-9]*[+|-|\\/|*]?[-]?[0-9]*[,|.]?[0-9]*';
   public equationForm = new FormGroup({
     equation: new FormControl('', [
       Validators.required,
-      Validators.pattern('[-]?[0-9]+[,|.]?[0-9]*[+|-|\\/|*]?[-]?[0-9]*[,|.]?[0-9]*')
+      Validators.maxLength(45),
+      Validators.pattern('[^a-z]*')
     ]),
   });
   @Output() equationSubmittedEvent = new EventEmitter<string>();
 
   get equation(): AbstractControl {
-    return this.equationForm.get('equation');;
+    return this.equationForm.get('equation');
   }
   public onSubmit(): void {
     this.submitted = true;
