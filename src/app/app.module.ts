@@ -11,6 +11,7 @@ import { ConverterComponent } from './component/converter/converter.component';
 import { LogComponent } from './component/log/log.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InputComponent } from './component/input/input.component';
+import {EventEmiterService} from './service/emmiter.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { InputComponent } from './component/input/input.component';
     AdvancedComponent,
     ConverterComponent,
     LogComponent,
-    InputComponent
+    InputComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,7 @@ import { InputComponent } from './component/input/input.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [EventEmiterService],
   bootstrap: [AppComponent]
 })
 

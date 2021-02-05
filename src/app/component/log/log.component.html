@@ -1,7 +1,20 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <p class="lead">
-      {{equationInLog}}
-    </p>
+<table class="table table-hover table-sm">
+  <thead>
+  <tr>
+  </tr>
+  </thead>
+  <tbody *ngFor="let log of logs">
+  <div *ngIf="log==='Expression invalid'; then invalidBlock else validBlock">
   </div>
-</div>
+  <ng-template #validBlock>
+    <tr>
+      <td scope="row">{{log}}</td>
+    </tr>
+  </ng-template>
+  <ng-template #invalidBlock>
+    <tr>
+      <td scope="row" class="table-danger">{{log}}</td>
+    </tr>
+  </ng-template>
+  </tbody>
+</table>
