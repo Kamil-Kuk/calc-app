@@ -1,10 +1,8 @@
 # CalcApp
 
-This is a repository for a simple app written for `Angular` course. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+Please visit demo site: https://kamil-kuk-calc-app.netlify.app
 
-## Setup
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is a repository for a calculator app written for `Angular` course. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
 # Scope of functionality
 This app allow the user to basic arythmetic operations, such as:
@@ -13,6 +11,7 @@ This app allow the user to basic arythmetic operations, such as:
   <li>substraction</li>
   <li>multiplication</li>
   <li>division</li>
+  <li>power of a number</li>
 
 [comment]: <> (  <li>root of any degree</li>)
 
