@@ -17,4 +17,7 @@ export class LogComponent{
         this.logs.push(input);
       });
   }
+  public onResetClick(): void {
+    this.logs = new Array<string>();
+  }
 }

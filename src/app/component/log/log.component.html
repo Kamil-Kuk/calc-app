@@ -1,20 +1,35 @@
-<table class="table table-hover table-sm">
-  <thead>
-  <tr>
-  </tr>
-  </thead>
-  <tbody *ngFor="let log of logs">
-  <div *ngIf="log==='Expression invalid'; then invalidBlock else validBlock">
+<div class="container col-12">
+  <div class="row">
+    <div class="col-6 log__header--text">History log</div>
+    <div class="col-6 log__header--reset" (click)="onResetClick()">Clear log</div>
   </div>
-  <ng-template #validBlock>
-    <tr>
-      <td scope="row">{{log}}</td>
-    </tr>
-  </ng-template>
-  <ng-template #invalidBlock>
-    <tr>
-      <td scope="row" class="table-danger">{{log}}</td>
-    </tr>
-  </ng-template>
-  </tbody>
-</table>
+  <div *ngFor="let log of logs">
+    <div class="row">
+      <div class="col-12 log__record">{{log}}</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--<table class="table table-hover table-sm">-->
+<!--  <thead>-->
+<!--  <tr>-->
+<!--  </tr>-->
+<!--  </thead>-->
+<!--  <tbody *ngFor="let log of logs">-->
+<!--  <div *ngIf="log==='Expression invalid'; then invalidBlock else validBlock">-->
+<!--  </div>-->
+<!--  <ng-template #validBlock>-->
+<!--    <tr>-->
+<!--      <td scope="row">{{log}}</td>-->
+<!--    </tr>-->
+<!--  </ng-template>-->
+<!--  <ng-template #invalidBlock>-->
+<!--    <tr>-->
+<!--      <td scope="row" class="table-danger">{{log}}</td>-->
+<!--    </tr>-->
+<!--  </ng-template>-->
+<!--  </tbody>-->
+<!--</table>-->

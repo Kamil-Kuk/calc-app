@@ -6,9 +6,6 @@
           <input type="text" formControlName="equation" class="form-control basic__input--filed"
                  placeholder="Enter your equation here"
                  aria-describedby="button-addon2" required>
-          <!--          <div class="input-group-append">-->
-          <!--            <button class="btn btn-outline-secondary" type="submit" [disabled]="equation.invalid">=</button>-->
-          <!--          </div>-->
         </div>
         <!--        <div *ngIf="equation.invalid && (equation.dirty || equation.touched)" class="alert alert-danger">-->
         <!--          <div *ngIf="equation.errors.pattern">-->
@@ -21,6 +18,7 @@
         <!--            Input required-->
         <!--          </div>-->
         <!--        </div>-->
+<!--        TODO zaimplementować mechanikę radio do buttonów-->
         <div class="row-col-12 justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('1')">1</button>
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('2')">2</button>

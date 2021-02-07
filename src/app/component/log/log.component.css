@@ -1,0 +1,21 @@
+.log__header--text {
+  margin-bottom: 16px;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fbfafb;
+}
+.log__header--reset {
+  margin-bottom: 16px;
+  font-family: Helvetica;
+  font-size: 16px;
+  text-align: right;
+  color: #bc8e04;
+}
+.log__record {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: rgba(251, 250, 251, 0.8);
+}
