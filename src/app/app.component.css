@@ -1,3 +1,53 @@
 .td-class {
   width: 40%;
 }
+.app__background {
+  height: 100vh;
+  background-image: linear-gradient(125deg, #101426 -17%, #0b0d16 83%);
+}
+.app__header {
+  margin-top: 72px;
+  margin-bottom: 48px;
+  font-family: Helvetica;
+  font-size: 48px;
+  text-align: center;
+  color: #fbfafb;
+}
+.app__background .container .app__header h1 {
+  font-weight: bold;
+}
+.app__buttons{
+  margin-bottom: 48px;
+}
+.app__button{
+  width: 152px;
+  height: 40px;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 20px;
+  background-color: #141626;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  color: rgba(251, 250, 251, 0.8);
+}
+.app__button.active{
+  background-color: #bc8e04;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #ffffff;
+}
+.custom-border{
+  border: white solid;
+}
+.app__footer{
+  margin-bottom: 16px;
+  font-family: Helvetica;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+.app__footer--link{
+  color: #bc8e04;
+}
