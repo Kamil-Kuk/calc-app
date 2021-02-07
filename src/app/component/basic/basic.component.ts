@@ -9,15 +9,15 @@ import {EventEmiterService} from '../../service/emmiter.service';
   styleUrls: ['./basic.component.css'],
 })
 export class BasicComponent{
-  private submitted = false;
-  private illegalRegex = '[0-9+-//*)(^%]*';
+  private availableSymbols = '[0-9+-//*)(^%,.]*';
   public equationSubmitted = '';
   public result: number;
   public equationFormGroup = new FormGroup({
     equation: new FormControl('', [
       Validators.required,
       Validators.maxLength(45),
-      Validators.pattern(this.illegalRegex)
+      Validators.pattern(this.availableSymbols),
+
     ]),
   });
 
@@ -30,7 +30,7 @@ export class BasicComponent{
 
   public onSubmit(): void {
     // this.trimDelimiter();
-    this.submitted = true;
+    // this.replaceDecimalSeparator();
     this.equationSubmitted = this.equation.value;
     this.result = evaluate(this.equationSubmitted);
     this._eventEmiter.emitChange(this.equationSubmitted + '=' + this.result);
@@ -50,6 +50,13 @@ export class BasicComponent{
   // private trimDelimiter(): void {
   //   if(this.equationSubmitted.endsWith(',')){
   //     this.equationSubmitted.replace(',','0');
+  //   }
+  // }
+
+  // public replaceDecimalSeparator(): void {
+  //   if (this.equationSubmitted.includes(',')){
+  //     console.log('test');
+  //     this.equationSubmitted.replace(/,/g, '.');
   //   }
   // }
 }
