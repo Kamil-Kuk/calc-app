@@ -1,6 +1,8 @@
-<form [formGroup]="equationForm" (ngSubmit)="onSubmit()">
-  <div class="input-group mb-1">
-    <input type="text" formControlName="equation" class="form-control" placeholder="Enter your equation here" aria-describedby="button-addon2">
+
+
+<form [formGroup]="equationFormGroup" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-1 has-validation">
+    <input type="text" formControlName="equation" class="form-control" placeholder="Enter your equation here" aria-describedby="button-addon2" required>
     <div class="input-group-append">
       <button class="btn btn-outline-secondary" type="submit" [disabled]="equation.invalid">=</button>
     </div>
@@ -18,31 +20,34 @@
   </div>
 </form>
 
+
+
+
 <div class="btn-toolbar mt-2 mb-2" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group mr-2 mb-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('1')">1</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('2')">2</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('3')">3</button>
   </div>
   <div class="btn-group mr-2 mb-2" role="group" aria-label="Second group">
-    <button type="button" class="btn btn-secondary">4</button>
-    <button type="button" class="btn btn-secondary">5</button>
-    <button type="button" class="btn btn-secondary">6</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('4')">4</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('5')">5</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('6')">6</button>
   </div>
   <div class="btn-group mr-2 mb-2" role="group" aria-label="Third group">
-    <button type="button" class="btn btn-secondary">7</button>
-    <button type="button" class="btn btn-secondary">8</button>
-    <button type="button" class="btn btn-secondary">9</button>
-    <button type="button" class="btn btn-secondary">0</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('7')">7</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('8')">8</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('9')">9</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('0')">0</button>
   </div>
   <div class="btn-group mr-2 mb-2" role="group" aria-label="Fourth group">
-    <button type="button" class="btn btn-secondary">,</button>
-    <button type="button" class="btn btn-secondary">000</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('.')">.</button>
+    <button type="button" class="btn btn-secondary"  (click)="onButtonClick('000')">000</button>
   </div>
   <div class="btn-group mb-2" role="group" aria-label="Fifth group">
-    <button type="button" class="btn btn-secondary">+</button>
-    <button type="button" class="btn btn-secondary">-</button>
-    <button type="button" class="btn btn-secondary">*</button>
-    <button type="button" class="btn btn-secondary">/</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('+')">+</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('-')">-</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('*')">*</button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('/')">/</button>
   </div>
 </div>

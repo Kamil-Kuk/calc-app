@@ -11,7 +11,7 @@ export class InputComponent{
   private illegalRegex = '[^a-Z]';
   // illegalRegex2 = '[-]?[0-9]+[,|.]?[0-9]*[+|-|\\/|*]?[-]?[0-9]*[,|.]?[0-9]*';
   public equationForm = new FormGroup({
-    equation: new FormControl('', [
+    equationFormControl: new FormControl('', [
       Validators.required,
       Validators.maxLength(45),
       Validators.pattern('[^a-z]*')

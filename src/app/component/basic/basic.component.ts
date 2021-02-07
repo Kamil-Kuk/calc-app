@@ -6,14 +6,14 @@ import {EventEmiterService} from '../../service/emmiter.service';
 @Component({
   selector: 'app-basic',
   templateUrl: './basic.component.html',
-  styleUrls: ['./basic.component.css']
+  styleUrls: ['./basic.component.css'],
 })
 export class BasicComponent{
   private submitted = false;
-  private illegalRegex = '[0-9+-//*=)(^%]*';
+  private illegalRegex = '[0-9+-//*)(^%]*';
   public equationSubmitted = '';
   public result: number;
-  public equationForm = new FormGroup({
+  public equationFormGroup = new FormGroup({
     equation: new FormControl('', [
       Validators.required,
       Validators.maxLength(45),
@@ -25,15 +25,16 @@ export class BasicComponent{
   }
 
   public get equation(): AbstractControl {
-    return this.equationForm.get('equation');
+    return this.equationFormGroup.get('equation');
   }
 
   public onSubmit(): void {
+    // this.trimDelimiter();
     this.submitted = true;
-    this.equationSubmitted = this.equationForm.value.equation;
+    this.equationSubmitted = this.equation.value;
     this.result = evaluate(this.equationSubmitted);
     this._eventEmiter.emitChange(this.equationSubmitted + '=' + this.result);
-    this.equationForm.reset();
+    this.equation.setValue('');
   }
 
 
@@ -42,16 +43,13 @@ export class BasicComponent{
     return inputArray;
   }
 
-  // private countParenthesis(input: string): number {
-  //   let openParenthesis = 0;
-  //   let closeParenthesis = 0;
-  //   for (let i = 0; i < input.length; i++){
-  //     if (input.charAt(i) === '('){
-  //       openParenthesis++;
-  //     }else if (input.charAt(i) === ')'){
-  //       closeParenthesis++;
-  //     }
-  //   } // end for
-  //   return 0;
+  public onButtonClick(i: string): void {
+    this.equation.setValue([this.equation.value + i]);
+  }
+
+  // private trimDelimiter(): void {
+  //   if(this.equationSubmitted.endsWith(',')){
+  //     this.equationSubmitted.replace(',','0');
+  //   }
   // }
 }
