@@ -38,16 +38,25 @@
   font-weight: bold;
   color: #ffffff;
 }
-.custom-border{
-  border: white solid;
-}
 .app__footer{
-  margin-bottom: 16px;
+  position: absolute;
+  bottom: 8px;
+  left: 45vw;
   font-family: Helvetica;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
 }
 .app__footer--link{
+  font-family: Helvetica;
+  font-size: 16px;
+  text-align: center;
   color: #bc8e04;
+}
+.app__log{
+  max-height: 50vh;  /*TODO zmienić wartość na wysokość kalkulatora*/
+  overflow-y: auto;
+}
+.app__router{
+  border-right: 1px solid #141626;
 }
