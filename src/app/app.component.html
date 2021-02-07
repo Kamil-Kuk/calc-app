@@ -6,35 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body class="app__background col-12">
-  <div class="container col-12">
-    <div class="row col-12">
-      <div class="col-12 app__header">
-        <h1>Calculator</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 app__buttons" role="navigation">
-        <ul class="nav nav-pills justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link app__button active" data-toggle="pill" [routerLink]="['/','basic']">Basic</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link app__button" data-toggle="pill" [routerLink]="['/','advanced']">Advanced</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link app__button" data-toggle="pill" [routerLink]="['/','converter']">Converter</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-4 app__router col-sm-8"><router-outlet></router-outlet></div>
-      <div class="col-lg-4 col-sm-8 app__log"><app-log></app-log></div>
+<div class="container col-12">
+  <div class="row">
+    <div class="col-12 app__header">
+      <h1>Calculator</h1>
     </div>
   </div>
-  <div class="app__footer justify-content-center">
-    Project by <a class="app__footer--link" href="https://github.com/Kamil-Kuk">Kamil Kukowski</a>
+  <div class="row">
+    <div class="col-12 app__buttons" role="navigation">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link app__button active" data-toggle="pill" [routerLink]="['/','basic']">Basic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link app__button" data-toggle="pill" [routerLink]="['/','advanced']">Advanced</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link app__button" data-toggle="pill" [routerLink]="['/','converter']">Converter</a>
+        </li>
+      </ul>
+    </div>
   </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-4 app__router col-sm-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-lg-4 col-sm-8 app__log">
+      <app-log></app-log>
+    </div>
+  </div>
+</div>
+<div class="app__footer justify-content-center">
+  Project by <a class="app__footer--link" href="https://github.com/Kamil-Kuk">Kamil Kukowski</a>
+</div>
 </body>
 </html>
 

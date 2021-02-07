@@ -1,0 +1,55 @@
+.basic__background{
+  margin-letf: 32px;
+  margin-right: 32px;
+}
+.basic__input{
+  margin-bottom: 24px;
+}
+.basic__input--filed{
+  margin-bottom: 24px;
+  border-radius: 20px;
+  border-width: 0px;
+  background-color: #0b0d16;
+  font-family: Helvetica;
+  font-size: 24px;
+  color: #fbfafb;
+}
+.basic__button--numbers{
+  box-shadow: none;
+  border-width: 0px;
+  width: 78px;
+  height: 78px;
+  margin: 8px;
+  border-radius: 48px;
+  background-color: #141626;
+  font-family: Helvetica;
+  font-size: 32px;
+  text-align: center;
+  justify-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+.basic__button--symbols{
+  box-shadow: none;
+  border-width: 0px;
+  width: 78px;
+  height: 78px;
+  margin: 8px;
+  border-radius: 48px;
+  background-color: rgba(188, 142, 4, 0.1);
+  font-family: Helvetica;
+  font-size: 32px;
+  text-align: center;
+  justify-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+.basic__button--symbols.active{
+  box-shadow: none;
+  background-color: rgba(188, 142, 4, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+}
+.basic__button--numbers.active{
+  box-shadow: none;
+  background-color: #26293c;
+  color: #1ca65a;
+}
+
