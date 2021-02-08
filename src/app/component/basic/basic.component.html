@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-12 basic__input">
       <form [formGroup]="equationFormGroup" (ngSubmit)="onSubmit()">
-        <div class="input-group mb-1 has-validation">
-          <input type="text" formControlName="equation" class="form-control basic__input--filed"
+        <div class="input-group mb-1 has-validation justify-content-end">
+          <input type="text" formControlName="equation" class="form-control basic__input--field"
                  placeholder="Enter your equation here"
                  aria-describedby="button-addon2" required>
         </div>
@@ -19,34 +19,25 @@
         <!--          </div>-->
         <!--        </div>-->
 <!--        TODO zaimplementować mechanikę radio do buttonów-->
-        <div class="row justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
-          <div class="col-1"></div>
-          <div class="col-2">
+        <div class="row justify-content-end basic__buttons btn-group-toggle" data-toggle="buttons">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('1')">1</button>
-          </div>
-          <div class="col-2">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('2')">2</button>
-          </div>
-          <div class="col-2">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('3')">3</button>
-          </div>
-          <div class="col-2">
           <button type="button" class="btn basic__button--symbols" (click)="onButtonClick('*')">*</button>
-          </div>
         </div>
-        <div class="row-col-12 justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
+        <div class="row justify-content-end basic__buttons btn-group-toggle" data-toggle="buttons">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('4')">4</button>
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('5')">5</button>
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('6')">6</button>
           <button type="button" class="btn basic__button--symbols" (click)="onButtonClick('-')">-</button>
         </div>
-        <div class="row-col-12 justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
+        <div class="row justify-content-end basic__buttons btn-group-toggle" data-toggle="buttons">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('7')">7</button>
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('8')">8</button>
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('9')">9</button>
           <button type="button" class="btn basic__button--symbols" (click)="onButtonClick('+')">+</button>
         </div>
-        <div class="row-col-12 justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
+        <div class="row justify-content-end basic__buttons btn-group-toggle" data-toggle="buttons">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('00')">00</button>
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('0')">0</button>
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('.')">.</button>

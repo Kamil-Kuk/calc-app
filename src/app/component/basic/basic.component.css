@@ -1,12 +1,12 @@
-.basic__background{
-  margin-letf: 32px;
-  margin-right: 32px;
-}
 .basic__input{
   margin-bottom: 24px;
+  padding: 0px;
 }
-.basic__input--filed{
+.basic__input--field{
+  max-width: 384px;
   margin-bottom: 24px;
+  margin-right: 32px;
+  margin-left: 32px;
   border-radius: 20px;
   border-width: 0px;
   background-color: #0b0d16;
@@ -51,5 +51,12 @@
   box-shadow: none;
   background-color: #26293c;
   color: #1ca65a;
+}
+.basic__row--no-padding{
+  padding: 0px;
+}
+.basic__buttons{
+  margin-right: 16px;
+  margin-left: 8px;
 }
 
