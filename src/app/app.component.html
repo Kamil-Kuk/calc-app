@@ -7,12 +7,12 @@
 </head>
 <body class="app__background col-12">
 <div class="container col-12">
-  <div class="row">
+  <div class="row app__row--no-padding">
     <div class="col-12 app__header">
       <h1>Calculator</h1>
     </div>
   </div>
-  <div class="row">
+  <div class="row app__row--no-padding">
     <div class="col-12 app__buttons" role="navigation">
       <ul class="nav nav-pills justify-content-center">
         <li class="nav-item">
@@ -27,17 +27,19 @@
       </ul>
     </div>
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center app__row--no-padding mb-3">
     <div class="col-lg-4 app__router col-sm-8">
       <router-outlet></router-outlet>
     </div>
-    <div class="col-lg-4 col-sm-8 app__log">
+    <div class="col-lg-4 col-sm-8 app__log mb-3">
       <app-log></app-log>
     </div>
   </div>
 </div>
-<div class="app__footer justify-content-center">
-  Project by <a class="app__footer--link" href="https://github.com/Kamil-Kuk">Kamil Kukowski</a>
+<div class="row app__row--no-padding">
+  <div class="col-12 app__footer justify-content-center">
+    Project by <a class="app__footer--link" href="https://github.com/Kamil-Kuk">Kamil Kukowski</a>
+  </div>
 </div>
 </body>
 </html>

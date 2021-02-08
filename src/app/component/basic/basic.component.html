@@ -19,11 +19,20 @@
         <!--          </div>-->
         <!--        </div>-->
 <!--        TODO zaimplementować mechanikę radio do buttonów-->
-        <div class="row-col-12 justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
+        <div class="row justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
+          <div class="col-1"></div>
+          <div class="col-2">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('1')">1</button>
+          </div>
+          <div class="col-2">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('2')">2</button>
+          </div>
+          <div class="col-2">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('3')">3</button>
+          </div>
+          <div class="col-2">
           <button type="button" class="btn basic__button--symbols" (click)="onButtonClick('*')">*</button>
+          </div>
         </div>
         <div class="row-col-12 justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
           <button type="button" class="btn basic__button--numbers" (click)="onButtonClick('4')">4</button>
