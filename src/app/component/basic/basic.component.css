@@ -42,12 +42,16 @@
   justify-items: center;
   color: rgba(255, 255, 255, 0.8);
 }
-.basic__button--symbols.active{
+.basic__button--symbols:focus{
   box-shadow: none;
   background-color: rgba(188, 142, 4, 0.4);
   color: rgba(255, 255, 255, 0.8);
 }
-.basic__button--numbers.active{
+.btn.basic__button--ac{
+  background-color: rgba(188, 142, 4, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+}
+.basic__button--numbers:focus{
   box-shadow: none;
   background-color: #26293c;
   color: #1ca65a;
@@ -60,3 +64,4 @@
   margin-left: 8px;
 }
 
+/*TODO dodać hover state dla buttonow - jaśniejsze tło*/

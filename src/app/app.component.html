@@ -27,11 +27,12 @@
       </ul>
     </div>
   </div>
+<!--  TODO naprawić breakpointy - button psują się między 992 a 1009px-->
   <div class="row justify-content-center app__row--no-padding mb-3">
-    <div class="col-lg-5 col-md-12 app__router app__row--no-padding">
+    <div class="col-lg-5 offset-lg-1 col-sm-12 app__router app__row--no-padding">
       <router-outlet></router-outlet>
     </div>
-    <div class="col-lg-5 col-sm-10 app__log mb-12">
+    <div class="col-lg-5 col-sm-8 app__log mb-12">
       <app-log></app-log>
     </div>
   </div>
