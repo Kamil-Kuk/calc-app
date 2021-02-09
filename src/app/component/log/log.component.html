@@ -3,9 +3,9 @@
     <div class="col-6 log__header--text">History log</div>
     <div class="col-6 log__header--reset" (click)="onResetClick()">Clear log</div>
   </div>
-  <div *ngFor="let log of logs">
+  <div class="log__record" *ngFor="let log of logs">
     <div class="row">
-      <div class="col-12 log__record">{{log}}</div>
+      <div class="col-12 ">{{log}}</div>
     </div>
   </div>
 </div>

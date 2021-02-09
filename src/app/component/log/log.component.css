@@ -13,7 +13,7 @@
   color: #bc8e04;
 }
 .log__record {
-  min-height: 128px;
+  /*min-height: 128px;*/
   margin-top: 8px;
   margin-bottom: 16px;
   font-family: Helvetica;

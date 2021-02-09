@@ -2,6 +2,7 @@
   width: 40%;
 }
 .app__background {
+  padding: 0px 0px 24px 0px;
   min-height: 100vh;
   background: linear-gradient(125deg, #101426 -17%, #0b0d16 83%);
 }
@@ -53,7 +54,8 @@
   color: #bc8e04;
 }
 .app__log{
-  max-height: 50vh;  /*TODO zmienić wartość na wysokość kalkulatora*/
+  padding-bottom: 24px;
+  max-height: 548px;
   overflow-y: auto;
 }
 .app__router{
