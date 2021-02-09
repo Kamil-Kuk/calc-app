@@ -1,6 +1,6 @@
 # CalcApp
 
-Please visit demo site: https://kamil-kuk-calc-app.netlify.app
+Check out deploy site: https://kamil-kuk-calc-app.netlify.app
 
 This is a repository for a calculator app written for `Angular` course. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
