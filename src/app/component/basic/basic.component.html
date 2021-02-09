@@ -21,7 +21,7 @@
 <!--        TODO zaimplementować mechanikę radio do buttonów-->
         <div class="row justify-content-center basic__buttons btn-group-toggle" data-toggle="buttons">
           <button type="button" class="btn basic__button--symbols basic__button--ac" (click)="onResetClick()">AC</button>
-          <button type="button" class="btn basic__button--symbols">+/-</button>
+          <button type="button" class="btn basic__button--symbols" (click)="onParenthesisClick()">( )</button>
           <button type="button" class="btn basic__button--symbols" (click)="onButtonClick('^')">^</button>
           <button type="button" class="btn basic__button--symbols" (click)="onButtonClick('/')">/</button>
         </div>

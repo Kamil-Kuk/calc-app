@@ -13,7 +13,6 @@ export class LogComponent{
   constructor(private _eventEmiter: EventEmiterService) {
     _eventEmiter.changeEmitted$.subscribe(
       input => {
-        console.log(input);
         this.logs.push(input);
       });
   }

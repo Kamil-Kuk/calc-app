@@ -9,7 +9,8 @@ import {EventEmiterService} from '../../service/emmiter.service';
   styleUrls: ['./basic.component.css'],
 })
 export class BasicComponent{
-  private availableSymbols = '[0-9+-//*)(^%,.]*';
+  // private parenthesisOpened = false;
+  private availableSymbols = '[0-9+-//*)(^,.]*';
   public equationSubmitted = '';
   public result: number;
   public equationFormGroup = new FormGroup({
@@ -44,24 +45,24 @@ export class BasicComponent{
   }
 
   public onButtonClick(i: string): void {
-    this.equation.setValue([this.equation.value + i]);
+    const currentEquation = this.equationFormGroup.get('equation').value;
+    this.equation.setValue([currentEquation + i]);
   }
 
   public onResetClick(): void {
     this.equation.setValue('');
   }
 
-  // private trimDelimiter(): void {
-  //   if(this.equationSubmitted.endsWith(',')){
-  //     this.equationSubmitted.replace(',','0');
-  //   }
-  // }
-
-  // public replaceDecimalSeparator(): void {
-  //   if (this.equationSubmitted.includes(',')){
-  //     console.log('test');
-  //     this.equationSubmitted.replace(/,/g, '.');
-  //   }
-  // }
-
+  public onParenthesisClick(): void {
+    let parenthesisOpened = false;
+    let currentEquation = this.equationFormGroup.get('equation').value + '()';
+    if (currentEquation.split('(').length > currentEquation.split(')').length){
+      parenthesisOpened = true;
+    }
+    if (parenthesisOpened) {
+      this.equation.setValue([this.equationFormGroup.get('equation').value + ')']);
+    } else {
+      this.equation.setValue([this.equationFormGroup.get('equation').value + '(']);
+    }
+  }
 }
