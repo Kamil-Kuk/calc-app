@@ -10,6 +10,8 @@
   font-family: Helvetica;
   font-size: 16px;
   text-align: right;
+}
+.log__header--reset-text {
   color: #bc8e04;
 }
 .log__record {
