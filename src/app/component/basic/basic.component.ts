@@ -46,7 +46,7 @@ export class BasicComponent{
   public onButtonClick(i: string): void {
     this.equation.setValue([this.equation.value + i]);
   }
-  // TODO naprawić wpisywanie pustych linii do loga - validacja input nie dla pola ''
+
   public onResetClick(): void {
     this.equation.setValue('');
   }

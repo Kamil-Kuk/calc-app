@@ -43,18 +43,22 @@
   color: rgba(255, 255, 255, 0.8);
 }
 .basic__button--symbols:focus{
-  box-shadow: none;
   background-color: rgba(188, 142, 4, 0.4);
   color: rgba(255, 255, 255, 0.8);
+}
+.basic__button--symbols:hover{
+  background-color: rgba(188, 142, 4, 0.3);
 }
 .btn.basic__button--ac{
   background-color: rgba(188, 142, 4, 0.4);
   color: rgba(255, 255, 255, 0.8);
 }
 .basic__button--numbers:focus{
-  box-shadow: none;
   background-color: #26293c;
   color: #1ca65a;
+}
+.basic__button--numbers:hover{
+  background-color: rgba(38, 41, 59, 0.5);
 }
 .basic__row--no-padding{
   padding: 0px;
@@ -64,4 +68,3 @@
   margin-left: 8px;
 }
 
-/*TODO dodać hover state dla buttonow - jaśniejsze tło*/
