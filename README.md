@@ -13,8 +13,9 @@ This app allow the user to basic arythmetic operations, such as:
   <li>division</li>
   <li>power of a number</li>
 
-Additionally it has a log view which displays previous equations.
 [comment]: <> (  <li>root of any degree</li>)
 
 [comment]: <> (  <li>power of any degree</li>)
 </ul>
+
+Additionally it has a log view which displays previous equations.
