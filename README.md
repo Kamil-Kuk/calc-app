@@ -2,7 +2,7 @@
 
 Check out deploy site: https://kamil-kuk-calc-app.netlify.app
 
-This is a repository for a calculator app written for `Angular` course. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+This is a repository for a calculator app made with `Angular`. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
 # Scope of functionality
 This app allow the user to basic arythmetic operations, such as:
@@ -13,6 +13,7 @@ This app allow the user to basic arythmetic operations, such as:
   <li>division</li>
   <li>power of a number</li>
 
+Additionally it has a log view which displays previous equations.
 [comment]: <> (  <li>root of any degree</li>)
 
 [comment]: <> (  <li>power of any degree</li>)
